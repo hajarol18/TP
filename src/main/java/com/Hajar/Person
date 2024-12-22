@@ -16,7 +16,7 @@ public class Person implements Comparable<Person> {
         this.address = address;
     }
 
-    // Getters
+    
     public String getFirstName() {
         return firstName;
     }
@@ -33,12 +33,12 @@ public class Person implements Comparable<Person> {
         return address;
     }
 
-    // Méthode pour calculer l'âge
+    
     public int calculateAge() {
         return LocalDate.now().getYear() - birthDate.getYear();
     }
 
-    // Comparable pour le tri
+    
     @Override
     public int compareTo(Person other) {
         int lastNameComparison = this.lastName.compareTo(other.lastName);
@@ -48,13 +48,13 @@ public class Person implements Comparable<Person> {
         return this.firstName.compareTo(other.firstName);
     }
 
-    // toString pour affichage
+   
     @Override
     public String toString() {
         return firstName + " " + lastName + " (" + birthDate + ") - " + address;
     }
 
-    // equals et hashCode pour les ensembles et comparaisons
+    
     @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;
